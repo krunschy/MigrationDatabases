@@ -1,0 +1,1 @@
+{"options":{"viewOn":"playlist","pipeline":[{"$match":{"Name":"Music"}},{"$unwind":"$track"},{"$project":{"_id":{"$numberInt":"0"},"TrackName":"$track.Name"}}]},"indexes":[],"collectionName":"Tracks in Music Playlist","type":"view"}

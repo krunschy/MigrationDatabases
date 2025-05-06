@@ -1,0 +1,1 @@
+{"options":{"viewOn":"playlist","pipeline":[{"$match":{"Name":"Music"}},{"$lookup":{"from":"track","localField":"_id","foreignField":"playlist","as":"tracks"}},{"$unwind":"$tracks"},{"$project":{"_id":{"$numberInt":"0"},"TrackName":"$tracks.Name"}}]},"indexes":[],"collectionName":"Tracks in Music Playlist","type":"view"}
